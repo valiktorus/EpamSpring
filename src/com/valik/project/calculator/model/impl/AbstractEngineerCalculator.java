@@ -1,11 +1,11 @@
-package com.valik.project.calculator.abstractClasses;
+package com.valik.project.calculator.model.impl;
 
-import com.valik.project.calculator.interfaces.EngineerCalculator;
+import com.valik.project.calculator.model.EngineerCalculator;
 
 /**
  * Created by Torus on 07.02.2017.
  */
-public class AbstractEngineerCalculator extends AbstractSimpleCalculator implements EngineerCalculator{
+public abstract class AbstractEngineerCalculator extends AbstractSimpleCalculator implements EngineerCalculator{
     @Override
     public double cosine() {
         return 0;

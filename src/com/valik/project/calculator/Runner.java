@@ -1,7 +1,5 @@
 package com.valik.project.calculator;
 
-import com.valik.project.calculator.realization.SecondCalculator;
-
 /**
  * Created by Torus on 05.02.2017.
  */

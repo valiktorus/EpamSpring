@@ -1,11 +1,11 @@
-package com.valik.project.calculator.abstractClasses;
+package com.valik.project.calculator.model.impl;
 
-import com.valik.project.calculator.interfaces.SimpleCalculator;
+import com.valik.project.calculator.model.SimpleCalculator;
 
 /**
  * Created by Torus on 07.02.2017.
  */
-public class AbstractSimpleCalculator implements SimpleCalculator {
+public abstract class AbstractSimpleCalculator implements SimpleCalculator {
     @Override
     public void plus() {
 
