@@ -49,4 +49,7 @@ public abstract class AbstractSimpleCalculator implements SimpleCalculator {
         }
     }
 
+    protected double getFirstNumber(List<String> task, int index) {
+        return index == 2 ? Double.parseDouble(task.get(index - 1)) : passingResult;
+    }
 }

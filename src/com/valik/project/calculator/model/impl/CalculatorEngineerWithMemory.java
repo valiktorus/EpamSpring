@@ -18,23 +18,13 @@ public class CalculatorEngineerWithMemory extends CalculatorEngineer{
                 passingResult = memory.switchMemory(memory, operator, passingResult);
             }
             if (operator.matches(SIMPLE_OPERATORS)){
-                double firstNumber;
-                if (i == 2){
-                    firstNumber = Double.parseDouble(task.get(i-1));
-                }else {
-                    firstNumber = passingResult;
-                }
+                double firstNumber = getFirstNumber(task, i);
                 double secondNumber = Double.parseDouble(task.get(i+1));
                 switchBySimpleOperator(operator, firstNumber, secondNumber);
                 i++;
             }
             if (operator.matches(ENGINEER_OPERATORS)){
-                double number;
-                if (i == 2){
-                    number = Double.parseDouble(task.get(i-1));
-                }else {
-                    number = passingResult;
-                }
+                double number = getFirstNumber(task, i);
                 switchByEngineerOperator(operator, number);
             }
         }
