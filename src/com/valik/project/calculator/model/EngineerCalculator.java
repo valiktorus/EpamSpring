@@ -1,8 +1,5 @@
 package com.valik.project.calculator.model;
 
-/**
- * Created by Torus on 05.02.2017.
- */
 public interface EngineerCalculator {
     String ENGINEER_OPERATORS = "cos|exp|sqrt";
     String COSINE = "cos";
@@ -14,5 +11,4 @@ public interface EngineerCalculator {
     double exponent(double number);
 
     double squareRoot(double number);
-
 }

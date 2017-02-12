@@ -4,9 +4,6 @@ import com.valik.project.calculator.model.SimpleCalculator;
 
 import java.util.List;
 
-/**
- * Created by Torus on 07.02.2017.
- */
 public abstract class AbstractSimpleCalculator implements SimpleCalculator {
     public List<String> task;
     protected double passingResult = 0;
@@ -34,6 +31,7 @@ public abstract class AbstractSimpleCalculator implements SimpleCalculator {
     public double divide(double firstNumber, double secondNumber) {
         return firstNumber / secondNumber;
     }
+
     protected void switchBySimpleOperator(String operator, double firstNumber, double secondNumber){
         switch (operator){
             case PLUS:

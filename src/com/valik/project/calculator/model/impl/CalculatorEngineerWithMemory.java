@@ -2,9 +2,6 @@ package com.valik.project.calculator.model.impl;
 
 import java.util.List;
 
-/**
- * Created by Torus on 05.02.2017.
- */
 public class CalculatorEngineerWithMemory extends CalculatorEngineer{
     private Memory memory;
 

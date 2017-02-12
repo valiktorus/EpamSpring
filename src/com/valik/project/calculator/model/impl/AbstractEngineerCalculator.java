@@ -4,9 +4,6 @@ import com.valik.project.calculator.model.EngineerCalculator;
 
 import java.util.List;
 
-/**
- * Created by Torus on 07.02.2017.
- */
 public abstract class AbstractEngineerCalculator extends AbstractSimpleCalculator implements EngineerCalculator{
     public AbstractEngineerCalculator(List<String> task) {
         super(task);
