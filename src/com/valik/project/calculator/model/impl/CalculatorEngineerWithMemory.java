@@ -18,23 +18,7 @@ public class CalculatorEngineerWithMemory extends CalculatorEngineer{
         for (int i = 1; i <task.size() ; i++) {
             String operator = task.get(i);
             if (operator.matches(MEMORY_OPERATORS)){
-                switch (operator){
-                    case MEMORY_CLEAR:
-                        memory.clearMemory();
-                        break;
-                    case MEMORY_READ:
-                        passingResult = memory.getMemoryElement();
-                        break;
-                    case MEMORY_SAVE:
-                        memory.setMemoryElement(passingResult);
-                        break;
-                    case INCREASE_MEMORY:
-                        memory.increaseMemory(passingResult);
-                        break;
-                    case REDUCE_MEMORY:
-                        memory.reduceMemory(passingResult);
-                        break;
-                }
+                passingResult = memory.switchMemory(memory, operator, passingResult);
                 i++;
             }
             if (operator.matches(SIMPLE_OPERATORS)){
