@@ -2,22 +2,42 @@ package com.valik.project.calculator.model.impl;
 
 import com.valik.project.calculator.model.EngineerCalculator;
 
+import java.util.List;
+
 /**
  * Created by Torus on 07.02.2017.
  */
 public abstract class AbstractEngineerCalculator extends AbstractSimpleCalculator implements EngineerCalculator{
-    @Override
-    public double cosine() {
-        return 0;
+    public AbstractEngineerCalculator(List<String> task) {
+        super(task);
     }
 
     @Override
-    public double exponent() {
-        return 0;
+    public double cosine(double number) {
+        return Math.cos(number);
     }
 
     @Override
-    public double squareRoot() {
-        return 0;
+    public double exponent(double number) {
+        return Math.exp(number);
+    }
+
+    @Override
+    public double squareRoot(double number) {
+        return Math.sqrt(number);
+    }
+
+    protected void switchByEngineerOperator(String operator, double number){
+        switch (operator) {
+            case COSINE:
+                passingResult = cosine(number);
+                break;
+            case EXPONENT:
+                passingResult = exponent(number);
+                break;
+            case SQUARE_ROOT:
+                passingResult = exponent(number);
+                break;
+        }
     }
 }
