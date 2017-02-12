@@ -10,7 +10,9 @@ public interface EngineerCalculator {
     String SQUARE_ROOT = "sqrt";
 
     double cosine(double number);
+
     double exponent(double number);
+
     double squareRoot(double number);
 
 }

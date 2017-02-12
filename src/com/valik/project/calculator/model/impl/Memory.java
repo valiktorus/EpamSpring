@@ -1,7 +1,5 @@
 package com.valik.project.calculator.model.impl;
 
-import static com.valik.project.calculator.model.SimpleCalculator.*;
-
 public class Memory {
     public static final String MEMORY_OPERATORS = "MC|M+|M-|MR|MS";
     public static final String MEMORY_CLEAR = "MC";
