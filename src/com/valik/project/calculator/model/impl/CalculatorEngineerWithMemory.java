@@ -17,9 +17,8 @@ public class CalculatorEngineerWithMemory extends CalculatorEngineer{
     public double getResult() {
         for (int i = 1; i <task.size() ; i++) {
             String operator = task.get(i);
-            if (operator.matches(MEMORY_OPERATORS)){
+            if (operator.matches(memory.MEMORY_OPERATORS)){
                 passingResult = memory.switchMemory(memory, operator, passingResult);
-                i++;
             }
             if (operator.matches(SIMPLE_OPERATORS)){
                 double firstNumber;

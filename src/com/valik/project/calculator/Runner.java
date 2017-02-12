@@ -6,8 +6,7 @@ import com.valik.project.calculator.model.impl.CalculatorEngineerWithMemory;
 import com.valik.project.calculator.model.impl.CalculatorSimple;
 import com.valik.project.calculator.model.impl.CalculatorSimpleWithMemory;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -19,9 +18,13 @@ import java.util.List;
  */
 public class Runner {
     public static void main(String[] args) throws IOException {
-        List<String> taskList = Files.readAllLines(Paths.get(args[0]), Charset.forName("UTF-8"));
-        SimpleCalculator calculator = getCalculator(Integer.parseInt(taskList.get(0)), taskList);
-        System.out.println(calculator.getResult());
+        if (args.length == 0){
+            System.out.println("There are no arguments");
+        }else {
+            List<String> taskList = Files.readAllLines(Paths.get(args[0]), Charset.forName("UTF-8"));
+            SimpleCalculator calculator = getCalculator(Integer.parseInt(taskList.get(0)), taskList);
+            System.out.println(calculator.getResult());
+        }
     }
 
     private static SimpleCalculator getCalculator(int calculatorNumber, List<String> taskList){
