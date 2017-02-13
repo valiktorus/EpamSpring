@@ -27,8 +27,8 @@ public class Runner {
         return calculatorFactory.createCalculator(taskList);
     }
 
-    private static CalculatorFactory createCalculatorFactoryById(int id){
-        switch (id){
+    private static CalculatorFactory createCalculatorFactoryById(int id) {
+        switch (id) {
             case 1:
                 return new CalculatorSimpleFactory();
             case 2:
@@ -38,7 +38,7 @@ public class Runner {
             case 4:
                 return new CalculatorEngineerWithMemoryFactory();
             default:
-                return null;
+                throw new RuntimeException("Unknown Calculator");
         }
     }
 
