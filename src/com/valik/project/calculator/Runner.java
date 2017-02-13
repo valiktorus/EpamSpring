@@ -3,8 +3,6 @@ package com.valik.project.calculator;
 import com.valik.project.calculator.model.Calculator;
 import com.valik.project.calculator.model.CalculatorFactory;
 import com.valik.project.calculator.model.impl.*;
-
-
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
