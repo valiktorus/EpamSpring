@@ -1,6 +1,6 @@
 package com.valik.project.calculator.model;
 
-public interface SimpleCalculator {
+public interface SimpleCalculator extends Calculator{
     String SIMPLE_OPERATORS = "[*\\-+/]";
     String PLUS = "+";
     String MINUS = "-";
@@ -14,6 +14,4 @@ public interface SimpleCalculator {
     double multiply(double firstNumber, double secondNumber);
 
     double divide(double firstNumber, double secondNumber);
-
-    double getResult();
 }

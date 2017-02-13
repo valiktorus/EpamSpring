@@ -1,7 +1,6 @@
 package com.valik.project.calculator.model.impl;
 
 import com.valik.project.calculator.model.SimpleCalculator;
-
 import java.util.List;
 
 public abstract class AbstractSimpleCalculator implements SimpleCalculator {

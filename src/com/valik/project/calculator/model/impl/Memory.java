@@ -36,8 +36,7 @@ public class Memory {
                         memory.clearMemory();
                         break;
                     case MEMORY_READ:
-                        passingResult = memory.getMemoryElement();
-                        break;
+                        return memory.getMemoryElement();
                     case MEMORY_SAVE:
                         memory.setMemoryElement(passingResult);
                         break;

@@ -1,7 +1,6 @@
 package com.valik.project.calculator.model.impl;
 
 import com.valik.project.calculator.model.EngineerCalculator;
-
 import java.util.List;
 
 public abstract class AbstractEngineerCalculator extends AbstractSimpleCalculator implements EngineerCalculator{
@@ -35,6 +34,7 @@ public abstract class AbstractEngineerCalculator extends AbstractSimpleCalculato
             case SQUARE_ROOT:
                 passingResult = squareRoot(number);
                 break;
+
         }
     }
 }

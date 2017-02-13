@@ -1,10 +1,8 @@
 package com.valik.project.calculator;
 
-import com.valik.project.calculator.model.SimpleCalculator;
-import com.valik.project.calculator.model.impl.CalculatorEngineer;
-import com.valik.project.calculator.model.impl.CalculatorEngineerWithMemory;
-import com.valik.project.calculator.model.impl.CalculatorSimple;
-import com.valik.project.calculator.model.impl.CalculatorSimpleWithMemory;
+import com.valik.project.calculator.model.Calculator;
+import com.valik.project.calculator.model.CalculatorFactory;
+import com.valik.project.calculator.model.impl.*;
 
 
 import java.io.IOException;
@@ -13,37 +11,35 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-/**
- * Created by Torus on 05.02.2017.
- */
 public class Runner {
     public static void main(String[] args) throws IOException {
         if (args.length == 0){
             System.out.println("There are no arguments");
         }else {
             List<String> taskList = Files.readAllLines(Paths.get(args[0]), Charset.forName("UTF-8"));
-            SimpleCalculator calculator = getCalculator(Integer.parseInt(taskList.get(0)), taskList);
+            Calculator calculator = getCalculator(Integer.parseInt(taskList.get(0)), taskList);
             System.out.println(calculator.getResult());
         }
     }
 
-    private static SimpleCalculator getCalculator(int calculatorNumber, List<String> taskList){
-        SimpleCalculator calculator = null;
-        switch (calculatorNumber){
+    private static Calculator getCalculator(int calculatorNumber, List<String> taskList){
+        CalculatorFactory calculatorFactory = createCalculatorFactoryById(calculatorNumber);
+        return calculatorFactory.createCalculator(taskList);
+    }
+
+    private static CalculatorFactory createCalculatorFactoryById(int id){
+        switch (id){
             case 1:
-                calculator = new CalculatorSimple(taskList);
-                break;
+                return new CalculatorSimpleFactory();
             case 2:
-                calculator = new CalculatorSimpleWithMemory(taskList);
-                break;
+                return new CalculatorSimpleWithMemoryFactory();
             case 3:
-                calculator = new CalculatorEngineer(taskList);
-                break;
+                return new CalculatorEngineerFactory();
             case 4:
-                calculator = new CalculatorEngineerWithMemory(taskList);
-                break;
+                return new CalculatorEngineerWithMemoryFactory();
+            default:
+                return null;
         }
-        return calculator;
     }
 
 }
