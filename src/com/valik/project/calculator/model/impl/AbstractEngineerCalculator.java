@@ -34,7 +34,6 @@ public abstract class AbstractEngineerCalculator extends AbstractSimpleCalculato
             case SQUARE_ROOT:
                 passingResult = squareRoot(number);
                 break;
-
         }
     }
 }

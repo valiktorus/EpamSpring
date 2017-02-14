@@ -1,6 +1,10 @@
-package com.valik.project.calculator.model.impl;
+package com.valik.project.calculator.factory;
 
 import com.valik.project.calculator.model.Calculator;
+import com.valik.project.calculator.model.impl.CalculatorEngineer;
+import com.valik.project.calculator.model.impl.CalculatorEngineerWithMemory;
+import com.valik.project.calculator.model.impl.CalculatorSimple;
+import com.valik.project.calculator.model.impl.CalculatorSimpleWithMemory;
 import java.util.List;
 
 public class CalculatorFactory {
